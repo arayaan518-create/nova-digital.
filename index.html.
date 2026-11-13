@@ -1,22 +1,257 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVA DIGITAL</title>
-    <style>
-        body {
-            background: #080d19;
-            color: white;
-            font-family: Arial;
-            text-align: center;
-            padding: 80px 15px;
-        }
-        h1 { color: #38d9ff; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NOVA DIGITAL - Innovation Starts Here.">
+<title>NOVA DIGITAL | Innovation Starts Here</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080d19;
+    color: white;
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: #0c1424;
+    border-bottom: 1px solid #202b40;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #58a6ff;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #58a6ff;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+    radial-gradient(circle at top, #172d50, #080d19 65%);
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 75px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #58a6ff;
+}
+
+.hero p {
+    max-width: 600px;
+    color: #b5c2d5;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2878e8;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1558b8;
+    transform: translateY(-3px);
+}
+
+section {
+    padding: 85px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-text {
+    color: #aab8cc;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: #111c30;
+    border: 1px solid #263750;
+    padding: 30px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #58a6ff;
+}
+
+.card h3 {
+    color: #58a6ff;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #aab8cc;
+}
+
+.about {
+    background: #0c1424;
+}
+
+.contact {
+    background: #111c30;
+}
+
+.contact a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+footer {
+    background: #060a12;
+    padding: 25px;
+    text-align: center;
+    color: #8292aa;
+    font-size: 14px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>NOVA DIGITAL</h1>
-    <p>Welcome to our professional digital world.</p>
+
+<header>
+    <div class="logo">NOVA DIGITAL.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Innovation <span>Starts Here.</span></h1>
+    <p>
+        Empowering businesses through modern digital
+        solutions, creative technology and innovation.
+    </p>
+    <a href="#services" class="btn">Explore Our Services</a>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About NOVA DIGITAL</h2>
+    <p class="section-text">
+        NOVA DIGITAL is a modern digital brand focused on
+        creativity, technology and helping businesses
+        build a stronger digital future.
+    </p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-text">
+        Smart solutions for a digital world.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Modern, responsive and professional websites.</p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Branding</h3>
+            <p>Creative brand identities and digital presence.</p>
+        </div>
+
+        <div class="card">
+            <h3>Creative Design</h3>
+            <p>Clean and attractive digital experiences.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about">
+    <h2 class="section-title">Our Vision</h2>
+    <p class="section-text">
+        Building a smarter digital future through
+        creativity, innovation and technology.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+    <p class="section-text">
+        Have a project or an idea? Get in touch with us.
+    </p>
+    <a href="mailto:hello@novadigital.com" class="btn">
+        Contact Us
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 NOVA DIGITAL. All Rights Reserved.</p>
+    <p>Innovation Starts Here.</p>
+</footer>
+
 </body>
 </html>

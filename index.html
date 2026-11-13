@@ -123,6 +123,59 @@ section{padding:65px 7%}
 .contact-box{padding:25px 15px}
 }
 </style>
+/* NOVA DIGITAL PORTFOLIO */
+
+#portfolio {
+  padding: 80px 20px;
+  background: #080d19;
+  text-align: center;
+}
+
+#portfolio h2 {
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+#portfolio p {
+  color: #aab5c8;
+}
+
+.portfolio-grid {
+  max-width: 1050px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #111c30;
+  border: 1px solid #263b5c;
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #5795ff;
+}
+
+.project-card .project-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: #7daeff;
+}
+
+.project-card p {
+  color: #aab5c8;
+  line-height: 1.6;
+}
+
 </head>
  <section id="contact">
   <h2>Contact Us</h2>
@@ -149,6 +202,33 @@ section{padding:65px 7%}
   </form>
  </section> 
 <body>
+<section id="portfolio">
+  <h2>Our Portfolio</h2>
+  <p>Explore some of our creative project concepts.</p>
+
+  <div class="portfolio-grid">
+
+    <div class="project-card">
+      <div class="project-icon">🌐</div>
+      <h3>Business Website</h3>
+      <p>A modern website concept designed for growing businesses.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🎨</div>
+      <h3>UI/UX Design</h3>
+      <p>A clean and modern interface design concept.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🎬</div>
+      <h3>Video Production</h3>
+      <p>Creative video editing and digital content concept.</p>
+    </div>
+
+  </div>
+</section>
+
 <header>
 <nav>
 <div class="logo">NOVA <span>DIGITAL.</span></div>

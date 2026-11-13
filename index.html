@@ -123,107 +123,202 @@ section{padding:65px 7%}
 .contact-box{padding:25px 15px}
 }
 </style>
-/* NOVA DIGITAL PORTFOLIO */
+/* NOVA DIGITAL PORTFOLIO V2 */
 
 #portfolio {
-  padding: 80px 20px;
+  padding: 90px 20px;
   background: #080d19;
   text-align: center;
 }
 
 #portfolio h2 {
-  color: #ffffff;
-  font-size: 36px;
+  font-size: 38px;
+  color: white;
   margin-bottom: 12px;
 }
 
-#portfolio p {
+#portfolio > p {
   color: #aab5c8;
+  margin-bottom: 45px;
 }
 
 .portfolio-grid {
-  max-width: 1050px;
-  margin: 40px auto 0;
+  max-width: 1150px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
 }
 
 .project-card {
-  background: #111c30;
-  border: 1px solid #263b5c;
-  border-radius: 15px;
-  padding: 30px 20px;
+  background: #101b30;
+  border: 1px solid #234578;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
   transition: 0.3s;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: #5795ff;
+  border-color: #398bff;
 }
 
-.project-card .project-icon {
-  font-size: 42px;
-  margin-bottom: 15px;
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
 }
 
-.project-card h3 {
-  color: #7daeff;
+.project-info {
+  padding: 23px;
 }
 
-.project-card p {
-  color: #aab5c8;
+.project-info h3 {
+  color: #75aaff;
+  font-size: 21px;
+}
+
+.project-info p {
+  color: #b5c1d5;
   line-height: 1.6;
 }
 
+.project-tag {
+  display: inline-block;
+  color: #70baff;
+  border: 1px solid #2864a8;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+@media(max-width: 600px) {
+  #portfolio h2 {
+    font-size: 30px;
+  }
+}
+
+/* NOVA DIGITAL PORTFOLIO V2 */
+
+#portfolio {
+  padding: 90px 20px;
+  background: #080d19;
+  text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+#portfolio > p {
+  color: #aab5c8;
+  margin-bottom: 45px;
+}
+
+.portfolio-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background: #101b30;
+  border: 1px solid #234578;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #398bff;
+}
+
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 23px;
+}
+
+.project-info h3 {
+  color: #75aaff;
+  font-size: 21px;
+}
+
+.project-info p {
+  color: #b5c1d5;
+  line-height: 1.6;
+}
+
+.project-tag {
+  display: inline-block;
+  color: #70baff;
+  border: 1px solid #2864a8;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+@media(max-width: 600px) {
+  #portfolio h2 {
+    font-size: 30px;
+  }
+}
+
 </head>
- <section id="contact">
-  <h2>Contact Us</h2>
-  <p>Have a project in mind? Let's work together.</p>
-
-  <form class="contact-form"
-        action="https://formsubmit.co/YOUR_EMAIL_HERE"
-        method="POST">
-
-    <input type="text" name="name"
-           placeholder="Your Name" required>
-
-    <input type="email" name="email"
-           placeholder="Your Email" required>
-
-    <textarea name="message"
-              placeholder="Your Message"
-              required></textarea>
-
-    <input type="hidden" name="_subject"
-           value="New NOVA DIGITAL Message">
-
-    <button type="submit">Send Message</button>
-  </form>
- </section> 
-<body>
 <section id="portfolio">
+
   <h2>Our Portfolio</h2>
-  <p>Explore some of our creative project concepts.</p>
+  <p>Explore our creative projects and digital solutions.</p>
 
   <div class="portfolio-grid">
 
     <div class="project-card">
-      <div class="project-icon">🌐</div>
-      <h3>Business Website</h3>
-      <p>A modern website concept designed for growing businesses.</p>
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="Business Website Design">
+      <div class="project-info">
+        <span class="project-tag">Web Development</span>
+        <h3>Business Website</h3>
+        <p>Modern website concepts for growing businesses.</p>
+      </div>
     </div>
 
     <div class="project-card">
-      <div class="project-icon">🎨</div>
-      <h3>UI/UX Design</h3>
-      <p>A clean and modern interface design concept.</p>
+      <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=800" alt="UI UX Design">
+      <div class="project-info">
+        <span class="project-tag">UI/UX Design</span>
+        <h3>Creative Interface</h3>
+        <p>Beautiful and user-friendly digital experiences.</p>
+      </div>
     </div>
 
     <div class="project-card">
-      <div class="project-icon">🎬</div>
-      <h3>Video Production</h3>
-      <p>Creative video editing and digital content concept.</p>
+      <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800" alt="Video Editing">
+      <div class="project-info">
+        <span class="project-tag">Video Editing</span>
+        <h3>Video Production</h3>
+        <p>Creative video editing and visual storytelling.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?w=800" alt="Digital Marketing">
+      <div class="project-info">
+        <span class="project-tag">Digital Marketing</span>
+        <h3>Brand Growth</h3>
+        <p>Digital marketing concepts for modern brands.</p>
+      </div>
     </div>
 
   </div>

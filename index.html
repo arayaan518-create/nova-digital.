@@ -5,506 +5,152 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080d19">
-
 <title>NOVA DIGITAL | Innovation Starts Here</title>
-
-<meta name="description" content="NOVA DIGITAL creates modern websites, digital experiences and creative solutions for businesses worldwide.">
-
 <style>
-:root {
-  --bg: #080d19;
-  --card: #101a2b;
-  --blue: #526d91;
-  --blue2: #243b64;
-  --silver: #dce3ec;
-  --white: #ffffff;
-  --muted: #aab6c8;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--white);
-  line-height: 1.7;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,13,25,.96);
-  border-bottom: 1px solid #243b64;
-}
-
-nav {
-  max-width: 1150px;
-  margin: auto;
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 23px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: #7797c1;
-}
-
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-nav a {
-  color: var(--silver);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #91afd5;
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  color: white;
-  border: 1px solid #526d91;
-  padding: 7px 12px;
-  font-size: 20px;
-  border-radius: 6px;
-}
-
-.hero {
-  min-height: 570px;
-  padding: 110px 8%;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 85% 40%, #243b644d, transparent 35%),
-    linear-gradient(130deg, #080d19, #101c30);
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.tag {
-  color: #9bb4d4;
-  letter-spacing: 3px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 8vw, 75px);
-  line-height: 1.1;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  color: #7797c1;
-}
-
-.hero p {
-  color: var(--muted);
-  max-width: 620px;
-  font-size: 17px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 25px;
-  border-radius: 7px;
-  background: var(--blue2);
-  border: 1px solid #7797c1;
-  color: white;
-  text-decoration: none;
-  margin: 5px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: #526d91;
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  background: transparent;
-}
-
-section {
-  padding: 85px 8%;
-  scroll-margin-top: 75px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: 35px;
-}
-
-.section-title span {
-  color: #7797c1;
-}
-
-.section-title p {
-  color: var(--muted);
-}
-
-.grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: linear-gradient(145deg, #121f34, #0c1423);
-  padding: 30px;
-  border: 1px solid #293e5e;
-  border-radius: 12px;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #7797c1;
-}
-
-.card .symbol {
-  font-size: 30px;
-  color: #91afd5;
-}
-
-.card h3 {
-  margin: 12px 0;
-  font-size: 21px;
-}
-
-.card p {
-  color: var(--muted);
-}
-
-.about {
-  background: #0d1524;
-}
-
-.about-content {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-}
-
-.about-content p {
-  color: var(--muted);
-  margin: 18px 0;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 850px;
-  margin: 40px auto 0;
-  text-align: center;
-}
-
-.stats h3 {
-  color: #91afd5;
-  font-size: 28px;
-}
-
-.stats p {
-  font-size: 13px;
-}
-
-.contact {
-  background: #0d1524;
-}
-
-.contact-box {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  padding: 40px;
-  border: 1px solid #293e5e;
-  border-radius: 12px;
-  background: #101a2b;
-}
-
-.contact-box p {
-  color: var(--muted);
-  margin: 15px 0 25px;
-}
-
-footer {
-  padding: 30px 8%;
-  text-align: center;
-  border-top: 1px solid #243b64;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-footer strong {
-  color: #91afd5;
-}
-
-@media(max-width:700px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    background: #0d1524;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    border-bottom: 1px solid #526d91;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .hero {
-    min-height: 500px;
-    padding: 80px 7%;
-  }
-
-  section {
-    padding: 65px 7%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .contact-box {
-    padding: 25px 15px;
-  }
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080d19;color:white;line-height:1.7}
+header{position:sticky;top:0;background:#080d19f5;border-bottom:1px solid #293e5e;z-index:10}
+nav{max-width:1150px;margin:auto;padding:16px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo span{color:#7797c1}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:#dce3ec;text-decoration:none;font-size:14px}
+nav a:hover{color:#91afd5}
+.menu-btn{display:none;background:none;color:white;border:1px solid #526d91;padding:7px 12px;font-size:20px;border-radius:6px}
+.hero{min-height:570px;padding:110px 8%;display:flex;align-items:center;background:radial-gradient(circle at 85% 40%,#526d9135,transparent 35%),linear-gradient(130deg,#080d19,#101c30)}
+.hero-content{max-width:850px}
+.tag{color:#91afd5;letter-spacing:3px;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(45px,8vw,78px);line-height:1.1;margin:20px 0}
+h1 span,.section-title span{color:#7797c1}
+.hero p{color:#aab6c8;max-width:620px;font-size:17px;margin-bottom:25px}
+.btn{display:inline-block;padding:13px 25px;border-radius:7px;background:#243b64;border:1px solid #7797c1;color:white;text-decoration:none;margin:5px;transition:.3s}
+.btn:hover{background:#526d91;transform:translateY(-3px)}
+.outline{background:transparent}
+section{padding:85px 8%;scroll-margin-top:75px}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:35px}
+.section-title p{color:#aab6c8}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:linear-gradient(145deg,#121f34,#0c1423);padding:30px;border:1px solid #293e5e;border-radius:12px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#7797c1}
+.symbol{font-size:30px;color:#91afd5}
+.card h3{margin:12px 0}
+.card p,.about-content p{color:#aab6c8}
+.about,.contact{background:#0d1524}
+.about-content{max-width:850px;margin:auto;text-align:center}
+.about-content p{margin:18px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:850px;margin:40px auto;text-align:center}
+.stats h3{color:#91afd5;font-size:25px}
+.stats p{color:#aab6c8;font-size:13px}
+.contact-box{max-width:700px;margin:auto;text-align:center;padding:40px;border:1px solid #293e5e;border-radius:12px;background:#101a2b}
+.contact-box p{color:#aab6c8;margin:15px 0 25px}
+footer{padding:30px 8%;text-align:center;border-top:1px solid #243b64;color:#aab6c8;font-size:13px}
+footer strong{color:#91afd5}
+@media(max-width:700px){
+nav ul{display:none;position:absolute;top:65px;left:0;width:100%;padding:25px;background:#0d1524;flex-direction:column;text-align:center;gap:20px}
+nav ul.show{display:flex}
+.menu-btn{display:block}
+.hero{min-height:500px;padding:80px 7%}
+section{padding:65px 7%}
+.grid,.stats{grid-template-columns:1fr}
+.contact-box{padding:25px 15px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
 <nav>
-  <div class="logo">NOVA <span>DIGITAL.</span></div>
-
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-  <ul id="menu">
-    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-    <li><a href="#services" onclick="closeMenu()">Services</a></li>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-  </ul>
+<div class="logo">NOVA <span>DIGITAL.</span></div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<ul id="menu">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
 </nav>
 </header>
 
 <main>
-
 <section class="hero" id="home">
 <div class="hero-content">
-
-  <div class="tag">Digital Innovation & Technology</div>
-
-  <h1>
-    Innovation<br>
-    Starts <span>Here.</span>
-  </h1>
-
-  <p>
-    We create modern digital solutions that help
-    businesses grow, connect and succeed in a
-    rapidly changing world.
-  </p>
-
-  <a href="#services" class="btn">Explore Services →</a>
-  <a href="#contact" class="btn btn-outline">Contact Us</a>
-
+<div class="tag">Digital Innovation & Technology</div>
+<h1>Innovation<br>Starts <span>Here.</span></h1>
+<p>We create modern digital solutions that help businesses grow, connect and succeed in a rapidly changing world.</p>
+<a href="#services" class="btn">Explore Services →</a>
+<a href="#contact" class="btn outline">Contact Us</a>
 </div>
 </section>
 
 <section id="services">
-
 <div class="section-title">
-  <h2>Our <span>Services</span></h2>
-  <p>Smart solutions. Modern technology. Better results.</p>
+<h2>Our <span>Services</span></h2>
+<p>Smart solutions. Modern technology. Better results.</p>
 </div>
-
 <div class="grid">
-
-  <div class="card">
-    <div class="symbol">⌘</div>
-    <h3>Web Development</h3>
-    <p>Modern, responsive and professional websites
-    designed for businesses and brands.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">✧</div>
-    <h3>UI/UX Design</h3>
-    <p>Beautiful digital experiences with clean,
-    modern and user-friendly interfaces.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">▶</div>
-    <h3>Video Editing</h3>
-    <p>Creative video content for brands,
-    social media and digital platforms.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">↗</div>
-    <h3>Digital Marketing</h3>
-    <p>Creative digital strategies to build
-    visibility and grow your online presence.</p>
-  </div>
-
+<div class="card"><div class="symbol">⌘</div><h3>Web Development</h3><p>Modern, responsive and professional websites designed for businesses and brands.</p></div>
+<div class="card"><div class="symbol">✧</div><h3>UI/UX Design</h3><p>Beautiful digital experiences with clean, modern and user-friendly interfaces.</p></div>
+<div class="card"><div class="symbol">▶</div><h3>Video Editing</h3><p>Creative video content for brands, social media and digital platforms.</p></div>
+<div class="card"><div class="symbol">↗</div><h3>Digital Marketing</h3><p>Creative strategies to build visibility and grow your online presence.</p></div>
 </div>
 </section>
 
 <section class="about" id="about">
-
 <div class="section-title">
-  <h2>About <span>NOVA DIGITAL</span></h2>
-  <p>Who we are and what we believe in.</p>
+<h2>About <span>NOVA DIGITAL</span></h2>
+<p>Who we are and what we believe in.</p>
 </div>
-
 <div class="about-content">
-  <p>
-    NOVA DIGITAL is a digital brand focused on
-    creativity, innovation and modern technology.
-    Our mission is to help businesses and individuals
-    build a stronger digital presence.
-  </p>
-
-  <p>
-    We believe great ideas deserve great digital
-    experiences. Innovation is at the heart of
-    everything we create.
-  </p>
+<p>NOVA DIGITAL is a digital brand focused on creativity, innovation and modern technology. Our mission is to help businesses and individuals build a stronger digital presence.</p>
+<p>We believe great ideas deserve great digital experiences. Innovation is at the heart of everything we create.</p>
 </div>
-
 <div class="stats">
-  <div>
-    <h3>Global</h3>
-    <p>Our Target Market</p>
-  </div>
-  <div>
-    <h3>Creative</h3>
-    <p>Our Approach</p>
-  </div>
-  <div>
-    <h3>Digital</h3>
-    <p>Our Focus</p>
-  </div>
+<div><h3>Global</h3><p>Our Target Market</p></div>
+<div><h3>Creative</h3><p>Our Approach</p></div>
+<div><h3>Digital</h3><p>Our Focus</p></div>
 </div>
-
 </section>
 
 <section id="portfolio">
-
 <div class="section-title">
-  <h2>Our <span>Portfolio</span></h2>
-  <p>Explore the type of digital work we aim to create.</p>
+<h2>Our <span>Portfolio</span></h2>
+<p>Explore the type of digital work we aim to create.</p>
 </div>
-
 <div class="grid">
-
-  <div class="card">
-    <div class="symbol">01</div>
-    <h3>Business Websites</h3>
-    <p>Professional website concepts for modern
-    businesses and organizations.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">02</div>
-    <h3>Creative Branding</h3>
-    <p>Visual identity concepts that give brands
-    a consistent and memorable look.</p>
-  </div>
-
+<div class="card"><div class="symbol">01</div><h3>Business Websites</h3><p>Professional website concepts for modern businesses.</p></div>
+<div class="card"><div class="symbol">02</div><h3>Creative Branding</h3><p>Visual identity concepts that give brands a memorable look.</p></div>
 </div>
 </section>
 
 <section class="contact" id="contact">
-
 <div class="section-title">
-  <h2>Let's <span>Connect</span></h2>
-  <p>Have an idea? Let's make it happen.</p>
+<h2>Let's <span>Connect</span></h2>
+<p>Have an idea? Let's make it happen.</p>
 </div>
-
 <div class="contact-box">
-  <h2>Build Something Great.</h2>
-  <p>
-    Get in touch with NOVA DIGITAL and let's
-    explore new possibilities together.
-  </p>
-
-  <a class="btn" href="mailto:YOUR_EMAIL_HERE">
-    Email Us →
-  </a>
+<h2>Build Something Great.</h2>
+<p>Get in touch with NOVA DIGITAL and let's explore new possibilities together.</p>
+<a class="btn" href="mailto:YOUR_EMAIL_HERE">Email Us →</a>
 </div>
-
 </section>
-
 </main>
 
 <footer>
-  <strong>NOVA DIGITAL</strong>
-  <p>Innovation Starts Here.</p>
-  <p>© <span id="year"></span> NOVA DIGITAL. All Rights Reserved.</p>
+<strong>NOVA DIGITAL</strong>
+<p>Innovation Starts Here.</p>
+<p>© <span id="year"></span> NOVA DIGITAL. All Rights Reserved.</p>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("show");
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
 }
-
-function closeMenu() {
-  document.getElementById("menu").classList.remove("show");
+function closeMenu(){
+document.getElementById("menu").classList.remove("show");
 }
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-
 </body>
 </html>
 <!DOCTYPE html>
@@ -513,505 +159,151 @@ document.getElementById("year").textContent =
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080d19">
-
 <title>NOVA DIGITAL | Innovation Starts Here</title>
-
-<meta name="description" content="NOVA DIGITAL creates modern websites, digital experiences and creative solutions for businesses worldwide.">
-
 <style>
-:root {
-  --bg: #080d19;
-  --card: #101a2b;
-  --blue: #526d91;
-  --blue2: #243b64;
-  --silver: #dce3ec;
-  --white: #ffffff;
-  --muted: #aab6c8;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background: var(--bg);
-  color: var(--white);
-  line-height: 1.7;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,13,25,.96);
-  border-bottom: 1px solid #243b64;
-}
-
-nav {
-  max-width: 1150px;
-  margin: auto;
-  padding: 18px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 23px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.logo span {
-  color: #7797c1;
-}
-
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-nav a {
-  color: var(--silver);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: #91afd5;
-}
-
-.menu-btn {
-  display: none;
-  background: none;
-  color: white;
-  border: 1px solid #526d91;
-  padding: 7px 12px;
-  font-size: 20px;
-  border-radius: 6px;
-}
-
-.hero {
-  min-height: 570px;
-  padding: 110px 8%;
-  display: flex;
-  align-items: center;
-  background:
-    radial-gradient(circle at 85% 40%, #243b644d, transparent 35%),
-    linear-gradient(130deg, #080d19, #101c30);
-}
-
-.hero-content {
-  max-width: 850px;
-}
-
-.tag {
-  color: #9bb4d4;
-  letter-spacing: 3px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  font-size: clamp(42px, 8vw, 75px);
-  line-height: 1.1;
-  margin: 20px 0;
-}
-
-.hero h1 span {
-  color: #7797c1;
-}
-
-.hero p {
-  color: var(--muted);
-  max-width: 620px;
-  font-size: 17px;
-  margin-bottom: 30px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 13px 25px;
-  border-radius: 7px;
-  background: var(--blue2);
-  border: 1px solid #7797c1;
-  color: white;
-  text-decoration: none;
-  margin: 5px;
-  transition: .3s;
-}
-
-.btn:hover {
-  background: #526d91;
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  background: transparent;
-}
-
-section {
-  padding: 85px 8%;
-  scroll-margin-top: 75px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: 35px;
-}
-
-.section-title span {
-  color: #7797c1;
-}
-
-.section-title p {
-  color: var(--muted);
-}
-
-.grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.card {
-  background: linear-gradient(145deg, #121f34, #0c1423);
-  padding: 30px;
-  border: 1px solid #293e5e;
-  border-radius: 12px;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  border-color: #7797c1;
-}
-
-.card .symbol {
-  font-size: 30px;
-  color: #91afd5;
-}
-
-.card h3 {
-  margin: 12px 0;
-  font-size: 21px;
-}
-
-.card p {
-  color: var(--muted);
-}
-
-.about {
-  background: #0d1524;
-}
-
-.about-content {
-  max-width: 850px;
-  margin: auto;
-  text-align: center;
-}
-
-.about-content p {
-  color: var(--muted);
-  margin: 18px 0;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 850px;
-  margin: 40px auto 0;
-  text-align: center;
-}
-
-.stats h3 {
-  color: #91afd5;
-  font-size: 28px;
-}
-
-.stats p {
-  font-size: 13px;
-}
-
-.contact {
-  background: #0d1524;
-}
-
-.contact-box {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
-  padding: 40px;
-  border: 1px solid #293e5e;
-  border-radius: 12px;
-  background: #101a2b;
-}
-
-.contact-box p {
-  color: var(--muted);
-  margin: 15px 0 25px;
-}
-
-footer {
-  padding: 30px 8%;
-  text-align: center;
-  border-top: 1px solid #243b64;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-footer strong {
-  color: #91afd5;
-}
-
-@media(max-width:700px) {
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    padding: 25px;
-    background: #0d1524;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    border-bottom: 1px solid #526d91;
-  }
-
-  nav ul.show {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .hero {
-    min-height: 500px;
-    padding: 80px 7%;
-  }
-
-  section {
-    padding: 65px 7%;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .contact-box {
-    padding: 25px 15px;
-  }
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#080d19;color:white;line-height:1.7}
+header{position:sticky;top:0;background:#080d19f5;border-bottom:1px solid #293e5e;z-index:10}
+nav{max-width:1150px;margin:auto;padding:16px 6%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}
+.logo span{color:#7797c1}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:#dce3ec;text-decoration:none;font-size:14px}
+nav a:hover{color:#91afd5}
+.menu-btn{display:none;background:none;color:white;border:1px solid #526d91;padding:7px 12px;font-size:20px;border-radius:6px}
+.hero{min-height:570px;padding:110px 8%;display:flex;align-items:center;background:radial-gradient(circle at 85% 40%,#526d9135,transparent 35%),linear-gradient(130deg,#080d19,#101c30)}
+.hero-content{max-width:850px}
+.tag{color:#91afd5;letter-spacing:3px;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(45px,8vw,78px);line-height:1.1;margin:20px 0}
+h1 span,.section-title span{color:#7797c1}
+.hero p{color:#aab6c8;max-width:620px;font-size:17px;margin-bottom:25px}
+.btn{display:inline-block;padding:13px 25px;border-radius:7px;background:#243b64;border:1px solid #7797c1;color:white;text-decoration:none;margin:5px;transition:.3s}
+.btn:hover{background:#526d91;transform:translateY(-3px)}
+.outline{background:transparent}
+section{padding:85px 8%;scroll-margin-top:75px}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:35px}
+.section-title p{color:#aab6c8}
+.grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:linear-gradient(145deg,#121f34,#0c1423);padding:30px;border:1px solid #293e5e;border-radius:12px;transition:.3s}
+.card:hover{transform:translateY(-6px);border-color:#7797c1}
+.symbol{font-size:30px;color:#91afd5}
+.card h3{margin:12px 0}
+.card p,.about-content p{color:#aab6c8}
+.about,.contact{background:#0d1524}
+.about-content{max-width:850px;margin:auto;text-align:center}
+.about-content p{margin:18px 0}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:850px;margin:40px auto;text-align:center}
+.stats h3{color:#91afd5;font-size:25px}
+.stats p{color:#aab6c8;font-size:13px}
+.contact-box{max-width:700px;margin:auto;text-align:center;padding:40px;border:1px solid #293e5e;border-radius:12px;background:#101a2b}
+.contact-box p{color:#aab6c8;margin:15px 0 25px}
+footer{padding:30px 8%;text-align:center;border-top:1px solid #243b64;color:#aab6c8;font-size:13px}
+footer strong{color:#91afd5}
+@media(max-width:700px){
+nav ul{display:none;position:absolute;top:65px;left:0;width:100%;padding:25px;background:#0d1524;flex-direction:column;text-align:center;gap:20px}
+nav ul.show{display:flex}
+.menu-btn{display:block}
+.hero{min-height:500px;padding:80px 7%}
+section{padding:65px 7%}
+.grid,.stats{grid-template-columns:1fr}
+.contact-box{padding:25px 15px}
 }
 </style>
 </head>
-
 <body>
-
 <header>
 <nav>
-  <div class="logo">NOVA <span>DIGITAL.</span></div>
-
-  <button class="menu-btn" onclick="toggleMenu()">☰</button>
-
-  <ul id="menu">
-    <li><a href="#home" onclick="closeMenu()">Home</a></li>
-    <li><a href="#services" onclick="closeMenu()">Services</a></li>
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
-    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-  </ul>
+<div class="logo">NOVA <span>DIGITAL.</span></div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+<ul id="menu">
+<li><a href="#home" onclick="closeMenu()">Home</a></li>
+<li><a href="#services" onclick="closeMenu()">Services</a></li>
+<li><a href="#about" onclick="closeMenu()">About</a></li>
+<li><a href="#portfolio" onclick="closeMenu()">Portfolio</a></li>
+<li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+</ul>
 </nav>
 </header>
 
 <main>
-
 <section class="hero" id="home">
 <div class="hero-content">
-
-  <div class="tag">Digital Innovation & Technology</div>
-
-  <h1>
-    Innovation<br>
-    Starts <span>Here.</span>
-  </h1>
-
-  <p>
-    We create modern digital solutions that help
-    businesses grow, connect and succeed in a
-    rapidly changing world.
-  </p>
-
-  <a href="#services" class="btn">Explore Services →</a>
-  <a href="#contact" class="btn btn-outline">Contact Us</a>
-
+<div class="tag">Digital Innovation & Technology</div>
+<h1>Innovation<br>Starts <span>Here.</span></h1>
+<p>We create modern digital solutions that help businesses grow, connect and succeed in a rapidly changing world.</p>
+<a href="#services" class="btn">Explore Services →</a>
+<a href="#contact" class="btn outline">Contact Us</a>
 </div>
 </section>
 
 <section id="services">
-
 <div class="section-title">
-  <h2>Our <span>Services</span></h2>
-  <p>Smart solutions. Modern technology. Better results.</p>
+<h2>Our <span>Services</span></h2>
+<p>Smart solutions. Modern technology. Better results.</p>
 </div>
-
 <div class="grid">
-
-  <div class="card">
-    <div class="symbol">⌘</div>
-    <h3>Web Development</h3>
-    <p>Modern, responsive and professional websites
-    designed for businesses and brands.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">✧</div>
-    <h3>UI/UX Design</h3>
-    <p>Beautiful digital experiences with clean,
-    modern and user-friendly interfaces.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">▶</div>
-    <h3>Video Editing</h3>
-    <p>Creative video content for brands,
-    social media and digital platforms.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">↗</div>
-    <h3>Digital Marketing</h3>
-    <p>Creative digital strategies to build
-    visibility and grow your online presence.</p>
-  </div>
-
+<div class="card"><div class="symbol">⌘</div><h3>Web Development</h3><p>Modern, responsive and professional websites designed for businesses and brands.</p></div>
+<div class="card"><div class="symbol">✧</div><h3>UI/UX Design</h3><p>Beautiful digital experiences with clean, modern and user-friendly interfaces.</p></div>
+<div class="card"><div class="symbol">▶</div><h3>Video Editing</h3><p>Creative video content for brands, social media and digital platforms.</p></div>
+<div class="card"><div class="symbol">↗</div><h3>Digital Marketing</h3><p>Creative strategies to build visibility and grow your online presence.</p></div>
 </div>
 </section>
 
 <section class="about" id="about">
-
 <div class="section-title">
-  <h2>About <span>NOVA DIGITAL</span></h2>
-  <p>Who we are and what we believe in.</p>
+<h2>About <span>NOVA DIGITAL</span></h2>
+<p>Who we are and what we believe in.</p>
 </div>
-
 <div class="about-content">
-  <p>
-    NOVA DIGITAL is a digital brand focused on
-    creativity, innovation and modern technology.
-    Our mission is to help businesses and individuals
-    build a stronger digital presence.
-  </p>
-
-  <p>
-    We believe great ideas deserve great digital
-    experiences. Innovation is at the heart of
-    everything we create.
-  </p>
+<p>NOVA DIGITAL is a digital brand focused on creativity, innovation and modern technology. Our mission is to help businesses and individuals build a stronger digital presence.</p>
+<p>We believe great ideas deserve great digital experiences. Innovation is at the heart of everything we create.</p>
 </div>
-
 <div class="stats">
-  <div>
-    <h3>Global</h3>
-    <p>Our Target Market</p>
-  </div>
-  <div>
-    <h3>Creative</h3>
-    <p>Our Approach</p>
-  </div>
-  <div>
-    <h3>Digital</h3>
-    <p>Our Focus</p>
-  </div>
+<div><h3>Global</h3><p>Our Target Market</p></div>
+<div><h3>Creative</h3><p>Our Approach</p></div>
+<div><h3>Digital</h3><p>Our Focus</p></div>
 </div>
-
 </section>
 
 <section id="portfolio">
-
 <div class="section-title">
-  <h2>Our <span>Portfolio</span></h2>
-  <p>Explore the type of digital work we aim to create.</p>
+<h2>Our <span>Portfolio</span></h2>
+<p>Explore the type of digital work we aim to create.</p>
 </div>
-
 <div class="grid">
-
-  <div class="card">
-    <div class="symbol">01</div>
-    <h3>Business Websites</h3>
-    <p>Professional website concepts for modern
-    businesses and organizations.</p>
-  </div>
-
-  <div class="card">
-    <div class="symbol">02</div>
-    <h3>Creative Branding</h3>
-    <p>Visual identity concepts that give brands
-    a consistent and memorable look.</p>
-  </div>
-
+<div class="card"><div class="symbol">01</div><h3>Business Websites</h3><p>Professional website concepts for modern businesses.</p></div>
+<div class="card"><div class="symbol">02</div><h3>Creative Branding</h3><p>Visual identity concepts that give brands a memorable look.</p></div>
 </div>
 </section>
 
 <section class="contact" id="contact">
-
 <div class="section-title">
-  <h2>Let's <span>Connect</span></h2>
-  <p>Have an idea? Let's make it happen.</p>
+<h2>Let's <span>Connect</span></h2>
+<p>Have an idea? Let's make it happen.</p>
 </div>
-
 <div class="contact-box">
-  <h2>Build Something Great.</h2>
-  <p>
-    Get in touch with NOVA DIGITAL and let's
-    explore new possibilities together.
-  </p>
-
-  <a class="btn" href="mailto:YOUR_EMAIL_HERE">
-    Email Us →
-  </a>
+<h2>Build Something Great.</h2>
+<p>Get in touch with NOVA DIGITAL and let's explore new possibilities together.</p>
+<a class="btn" href="mailto:YOUR_EMAIL_HERE">Email Us →</a>
 </div>
-
 </section>
-
 </main>
 
 <footer>
-  <strong>NOVA DIGITAL</strong>
-  <p>Innovation Starts Here.</p>
-  <p>© <span id="year"></span> NOVA DIGITAL. All Rights Reserved.</p>
+<strong>NOVA DIGITAL</strong>
+<p>Innovation Starts Here.</p>
+<p>© <span id="year"></span> NOVA DIGITAL. All Rights Reserved.</p>
 </footer>
 
 <script>
-function toggleMenu() {
-  document.getElementById("menu").classList.toggle("show");
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("show");
 }
-
-function closeMenu() {
-  document.getElementById("menu").classList.remove("show");
+function closeMenu(){
+document.getElementById("menu").classList.remove("show");
 }
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
-
 </body>
 </html>

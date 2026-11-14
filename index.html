@@ -305,6 +305,27 @@ section{padding:65px 7%}
 </footer>
 
 <script>
+function sendMessage(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const phone = "252XXXXXXXXX";
+
+  const text =
+    "Hello NOVA DIGITAL!\n" +
+    "Name: " + name + "\n" +
+    "Email: " + email + "\n" +
+    "Project: " + message;
+
+  const url = "https://wa.me/" + phone +
+    "?text=" + encodeURIComponent(text);
+
+  window.open(url, "_blank");
+}
+
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("show");
 }
